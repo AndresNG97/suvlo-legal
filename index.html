@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — Suvlo</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -132,6 +133,36 @@
       letter-spacing: 0.06em;
     }
 
+    .third-party-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--sans);
+      font-size: 14px;
+      margin: 1.25rem 0;
+    }
+
+    .third-party-table th {
+      text-align: left;
+      font-weight: 600;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .third-party-table td {
+      padding: 0.65rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: top;
+    }
+
+    .third-party-table tr:last-child td {
+      border-bottom: none;
+    }
+
     section {
       margin-bottom: 2.75rem;
     }
@@ -198,65 +229,97 @@
 
       <div class="badge">Legal</div>
       <h1>Política de Privacidad</h1>
-      <p class="meta">Última actualización: 13 de mayo de 2025</p>
+      <p class="meta">Última actualización: 24 de mayo de 2025</p>
 
       <div class="summary-box">
         <strong>Resumen</strong>
-        Suvlo no recopila, almacena ni comparte datos personales de sus usuarios. Esta aplicación funciona completamente de forma local en tu dispositivo.
+        Suvlo recopila únicamente los datos mínimos necesarios para el correcto funcionamiento de la aplicación: registros de errores técnicos (a través de Sentry) y un identificador de usuario para gestionar suscripciones (a través de RevenueCat). No recopilamos datos personales como nombre, correo electrónico ni ubicación.
       </div>
     </header>
 
     <section>
       <h2>1. Información general</h2>
       <p>Esta Política de Privacidad describe cómo Suvlo ("la Aplicación", "nosotros") trata la información cuando utilizas nuestra aplicación móvil.</p>
-      <p>Nos comprometemos a proteger tu privacidad. Hemos diseñado Suvlo con un enfoque de privacidad desde el origen (<em>privacy by design</em>), lo que significa que la recopilación de datos personales no es parte de nuestro modelo de funcionamiento.</p>
+      <p>Nos comprometemos a proteger tu privacidad y a recopilar únicamente los datos estrictamente necesarios para ofrecer un servicio estable y funcional.</p>
     </section>
 
     <section>
-      <h2>2. Datos que no recopilamos</h2>
-      <p>Suvlo no recopila ningún tipo de dato personal, incluyendo:</p>
-      <ul>
-        <li>Nombre, dirección de correo electrónico u otros datos de contacto</li>
-        <li>Datos de localización o GPS</li>
-        <li>Información del dispositivo o identificadores únicos</li>
-        <li>Datos de uso, analíticas o estadísticas de comportamiento</li>
-        <li>Imágenes, archivos o contenido multimedia</li>
-      </ul>
-      <p>No existe ningún servidor externo que reciba información desde la Aplicación.</p>
+      <h2>2. Datos que recopilamos</h2>
+      <p>Suvlo recopila los siguientes tipos de datos a través de servicios de terceros:</p>
+
+      <table class="third-party-table">
+        <thead>
+          <tr>
+            <th>Dato</th>
+            <th>Servicio</th>
+            <th>Finalidad</th>
+            <th>Retención</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Registros de fallos y errores técnicos</td>
+            <td>Sentry</td>
+            <td>Detectar y corregir errores en la aplicación</td>
+            <td>90 días</td>
+          </tr>
+          <tr>
+            <td>Identificador de usuario anónimo</td>
+            <td>RevenueCat</td>
+            <td>Gestionar y verificar suscripciones</td>
+            <td>Mientras exista la cuenta</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>No recopilamos nombre, dirección de correo electrónico, número de teléfono, ubicación, ni ningún otro dato personal identificable.</p>
     </section>
 
     <section>
-      <h2>3. Almacenamiento local</h2>
-      <p>Toda la información que generes o introduzcas en Suvlo se almacena exclusivamente en tu dispositivo. En ningún momento se transmite a servidores externos ni a terceros.</p>
-      <p>Si desinstallas la Aplicación, todos los datos locales serán eliminados junto con ella, salvo que estén respaldados por el propio sistema operativo de tu dispositivo (por ejemplo, a través de iCloud o Google Drive).</p>
+      <h2>3. Registros de fallos — Sentry</h2>
+      <p>Utilizamos Sentry para la monitorización de errores técnicos. Cuando la aplicación experimenta un fallo, Sentry puede recopilar automáticamente información sobre el dispositivo (sistema operativo, versión de la app) y el contexto técnico del error.</p>
+      <p>Esta información se utiliza exclusivamente para diagnosticar y corregir problemas, y se elimina automáticamente a los 90 días. Sentry no tiene acceso a ningún contenido que introduzcas en la aplicación.</p>
+      <p>Puedes consultar la política de privacidad de Sentry en <a href="https://sentry.io/privacy/" target="_blank">sentry.io/privacy</a>.</p>
     </section>
 
     <section>
-      <h2>4. Servicios de terceros</h2>
-      <p>Suvlo no integra servicios de análisis, publicidad, seguimiento ni ninguna otra herramienta de terceros que pueda recopilar datos sobre el uso de la Aplicación.</p>
+      <h2>4. Gestión de suscripciones — RevenueCat</h2>
+      <p>Para gestionar las suscripciones de pago utilizamos RevenueCat. Este servicio genera un identificador de usuario anónimo que permite verificar el estado de tu suscripción sin asociarlo a tu nombre ni a tu correo electrónico.</p>
+      <p>Este identificador es necesario para el correcto funcionamiento de las funciones de pago de la aplicación y no puede desactivarse si utilizas dichas funciones.</p>
+      <p>Puedes consultar la política de privacidad de RevenueCat en <a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a>.</p>
     </section>
 
     <section>
-      <h2>5. Menores de edad</h2>
-      <p>Dado que no recopilamos ningún tipo de dato personal, la Aplicación no presenta riesgos específicos en relación con menores de edad. No obstante, si eres padre, madre o tutor legal y tienes alguna consulta, no dudes en contactarnos.</p>
+      <h2>5. Almacenamiento local</h2>
+      <p>Todo el contenido que generes o introduzcas en Suvlo se almacena exclusivamente en tu dispositivo y nunca se transmite a nuestros servidores. Si desinstallas la aplicación, estos datos locales serán eliminados, salvo que estén respaldados por el sistema operativo (por ejemplo, iCloud o Google Drive).</p>
     </section>
 
     <section>
-      <h2>6. Cambios en esta política</h2>
-      <p>Si en el futuro Suvlo incorporase funcionalidades que impliquen el tratamiento de datos personales, esta política será actualizada con antelación suficiente y se notificará a los usuarios a través de la propia Aplicación o de la página oficial.</p>
+      <h2>6. Cifrado y seguridad</h2>
+      <p>Todos los datos que se transmiten fuera de tu dispositivo (registros de errores e identificador de suscripción) viajan cifrados mediante HTTPS/TLS.</p>
+    </section>
+
+    <section>
+      <h2>7. Eliminación de datos</h2>
+      <p>Los registros de errores recopilados por Sentry se eliminan automáticamente a los 90 días. Si deseas solicitar la eliminación anticipada de cualquier dato, puedes contactarnos en la dirección indicada al final de esta política.</p>
+    </section>
+
+    <section>
+      <h2>8. Cambios en esta política</h2>
+      <p>Si en el futuro se incorporasen nuevas funcionalidades que impliquen el tratamiento de datos adicionales, esta política será actualizada con antelación suficiente y se notificará a los usuarios a través de la propia aplicación o de la página oficial.</p>
       <p>Te recomendamos revisar esta página periódicamente para estar al tanto de cualquier cambio.</p>
     </section>
 
     <hr class="divider" />
 
     <section>
-      <h2>7. Contacto</h2>
+      <h2>9. Contacto</h2>
       <p>Si tienes alguna pregunta sobre esta Política de Privacidad, puedes ponerte en contacto con nosotros en:</p>
       <p><a href="mailto:andresnavarro.code@gmail.com">andresnavarro.code@gmail.com</a></p>
     </section>
 
     <footer>
-      <p>© 2025 Suvlo. Todos los derechos reservados.</p>
+      <p>© 2026 Suvlo. Todos los derechos reservados.</p>
     </footer>
 
   </div>
