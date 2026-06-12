@@ -141,12 +141,29 @@
         text-transform: uppercase;
         color: var(--faint);
         font-weight: 600;
-        margin-bottom: 8px;
+        margin-bottom: 14px;
       }
-      .summary p {
+      .summary ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .summary li {
+        position: relative;
+        padding-left: 22px;
+        margin: 10px 0;
         color: var(--muted);
         font-size: 15.5px;
-        margin: 0;
+      }
+      .summary li::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 9px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--accent);
       }
 
       /* ---------- Sections ---------- */
@@ -171,6 +188,12 @@
         letter-spacing: -0.01em;
         margin-bottom: 14px;
       }
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 22px 0 6px;
+        color: var(--text);
+      }
       p {
         margin-bottom: 14px;
         color: var(--muted);
@@ -183,31 +206,62 @@
         font-weight: 600;
       }
 
-      /* ---------- Table ---------- */
-      .table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 14.5px;
-        margin: 18px 0;
+      ul.body {
+        margin: 0 0 14px;
+        padding-left: 0;
+        list-style: none;
       }
-      .table th {
-        text-align: left;
-        font-weight: 600;
-        color: var(--faint);
+      ul.body li {
+        position: relative;
+        padding-left: 22px;
+        margin: 9px 0;
+        color: var(--muted);
+      }
+      ul.body li::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 11px;
+        width: 6px;
+        height: 6px;
+        border-radius: 2px;
+        background: var(--accent);
+      }
+
+      /* ---------- Service cards ---------- */
+      .service {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 22px 24px;
+        margin: 16px 0;
+      }
+      .service h3 {
+        margin: 0 0 8px;
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+      }
+      .service .tag {
         font-size: 11px;
+        font-weight: 600;
+        color: var(--accent);
+        border: 1px solid var(--line-strong);
+        padding: 2px 9px;
+        border-radius: 20px;
+        letter-spacing: 0.04em;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
-        padding: 0 12px 8px;
-        border-bottom: 1px solid var(--line-strong);
       }
-      .table td {
-        padding: 12px;
-        border-bottom: 1px solid var(--line);
-        color: var(--text);
-        vertical-align: top;
+      .service p:last-child {
+        margin-bottom: 0;
       }
-      .table tr:last-child td {
-        border-bottom: none;
+
+      .placeholder {
+        background: #f4f4f5;
+        color: var(--muted);
+        padding: 1px 6px;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 0.94em;
       }
 
       /* ---------- Footer ---------- */
@@ -234,180 +288,262 @@
     <header class="wrap">
       <p class="eyebrow">Suvlo · Privacidad</p>
       <h1>Política de Privacidad</h1>
-      <p class="meta">Última actualización: 24 de mayo de 2026</p>
+      <p class="meta">
+        Aplicable a <strong>Suvlo</strong> · Última actualización:
+        <span class="placeholder">06/06/2026</span>
+      </p>
     </header>
 
     <main class="wrap">
       <div class="summary">
         <h2>En resumen</h2>
-        <p>
-          Suvlo recopila únicamente datos técnicos anónimos para funcionar.
-          Todo lo que introduces se queda en tu dispositivo. No pedimos nombre,
-          correo ni datos personales identificables.
-        </p>
+        <ul>
+          <li>
+            Tus datos de suscripciones (servicios, importes, fechas de cobro)
+            se guardan <strong>solo en tu dispositivo</strong> y nunca se envían
+            a ningún servidor nuestro.
+          </li>
+          <li>
+            No hay cuenta ni registro:
+            <strong>no te pedimos correo, nombre ni contraseña</strong>.
+          </li>
+          <li>
+            La información se guarda <strong>cifrada</strong> y puedes proteger
+            la app con <strong>bloqueo biométrico</strong>.
+          </li>
+          <li>
+            Solo dos servicios externos reciben datos limitados:
+            <strong>RevenueCat</strong> (gestión de suscripciones) y
+            <strong>Better Stack</strong> (informes de errores).
+          </li>
+          <li>
+            <strong>No vendemos tus datos</strong> ni los usamos con fines
+            publicitarios.
+          </li>
+        </ul>
       </div>
 
       <section>
-        <h2 class="sec"><span class="num">01</span> · Información general</h2>
-        <h3 class="sec-title">Información general</h3>
+        <h2 class="sec"><span class="num">01</span> · Responsable</h2>
+        <h3 class="sec-title">Quién es el responsable</h3>
         <p>
-          Esta Política de Privacidad describe cómo Suvlo ("la Aplicación",
-          "nosotros") trata la información cuando utilizas nuestra aplicación
-          móvil.
-        </p>
-        <p>
-          Nos comprometemos a proteger tu privacidad y a recopilar únicamente
-          los datos estrictamente necesarios para ofrecer un servicio estable y
-          funcional.
+          El responsable del tratamiento de los datos descritos en esta
+          política es <span class="placeholder">ANG CODE</span>, con domicilio
+          en <span class="placeholder">ESPAÑA</span>. Para cualquier cuestión
+          sobre privacidad puedes escribir a
+          <span class="placeholder">andresnavarro.code@gmail.com</span>.
         </p>
       </section>
 
       <section>
-        <h2 class="sec"><span class="num">02</span> · Datos que recopilamos</h2>
-        <h3 class="sec-title">Datos que recopilamos</h3>
+        <h2 class="sec"><span class="num">02</span> · Datos en tu dispositivo</h2>
+        <h3 class="sec-title">Datos que se guardan en tu dispositivo</h3>
         <p>
-          Suvlo recopila los siguientes tipos de datos a través de servicios de
-          terceros:
+          Suvlo es una aplicación <strong>local-first</strong>: la
+          información que introduces para hacer el seguimiento de tus
+          suscripciones y gastos vive únicamente en tu teléfono. Esto incluye,
+          entre otros:
         </p>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Dato</th>
-              <th>Servicio</th>
-              <th>Finalidad</th>
-              <th>Retención</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Registros de fallos y errores técnicos</td>
-              <td>Sentry</td>
-              <td>Detectar y corregir errores en la aplicación</td>
-              <td>90 días</td>
-            </tr>
-            <tr>
-              <td>Identificador de usuario anónimo</td>
-              <td>RevenueCat</td>
-              <td>Gestionar y verificar suscripciones</td>
-              <td>Mientras exista la cuenta</td>
-            </tr>
-          </tbody>
-        </table>
+        <ul class="body">
+          <li>
+            Datos de tus suscripciones: nombre del servicio, importe, ciclo de
+            facturación, fechas de cobro y categoría.
+          </li>
+          <li>Los cálculos de gasto y resúmenes derivados.</li>
+          <li>Las preferencias y ajustes de la aplicación.</li>
+        </ul>
         <p>
-          No recopilamos nombre, dirección de correo electrónico, número de
-          teléfono, ubicación, ni ningún otro dato personal identificable.
+          Estos datos
+          <strong>no se transmiten a nuestros servidores</strong> (no
+          tenemos), ni a terceros, ni se utilizan para perfilarte. Permanecen
+          bajo tu control en todo momento.
         </p>
       </section>
 
       <section>
-        <h2 class="sec"><span class="num">03</span> · Registros de fallos — Sentry</h2>
-        <h3 class="sec-title">Registros de fallos — Sentry</h3>
+        <h2 class="sec"><span class="num">03</span> · Datos que salen del dispositivo</h2>
+        <h3 class="sec-title">Datos que sí salen del dispositivo</h3>
         <p>
-          Utilizamos Sentry para la monitorización de errores técnicos. Cuando
-          la aplicación experimenta un fallo, Sentry puede recopilar
-          automáticamente información sobre el dispositivo (sistema operativo,
-          versión de la app) y el contexto técnico del error.
+          Para que la aplicación funcione y podamos mantenerla, utilizamos dos
+          proveedores externos que reciben una cantidad limitada de
+          información. Es importante que lo sepas con transparencia:
         </p>
+
+        <div class="service">
+          <h3>RevenueCat <span class="tag">Suscripciones</span></h3>
+          <p>
+            Gestiona las compras y suscripciones dentro de la app. Para ello
+            procesa un
+            <strong>identificador de usuario anónimo</strong> generado por la
+            app, tu <strong>historial de compras</strong> e información
+            técnica del dispositivo. RevenueCat
+            <strong>no recibe tus datos de suscripciones ni de gastos</strong>.
+          </p>
+          <p>
+            Más información en la política de privacidad de RevenueCat:
+            <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener"
+              >revenuecat.com/privacy</a
+            >.
+          </p>
+        </div>
+
+        <div class="service">
+          <h3>Better Stack <span class="tag">Informes de errores</span></h3>
+          <p>
+            Nos ayuda a detectar y corregir fallos. Cuando se produce un
+            error, recopila <strong>datos de diagnóstico</strong>: modelo de
+            dispositivo, versión del sistema operativo, versión de la app y
+            detalles técnicos del fallo. Se utiliza
+            <strong>únicamente para mejorar la estabilidad</strong> y no para
+            identificarte.
+          </p>
+          <p>
+            Más información en la política de privacidad de Better Stack:
+            <a href="https://betterstack.com/privacy" target="_blank" rel="noopener"
+              >betterstack.com/privacy</a
+            >.
+          </p>
+        </div>
+
         <p>
-          Esta información se utiliza exclusivamente para diagnosticar y
-          corregir problemas, y se elimina automáticamente a los 90 días. Sentry
-          no tiene acceso a ningún contenido que introduzcas en la aplicación.
-        </p>
-        <p>
-          Puedes consultar la política de privacidad de Sentry en
-          <a href="https://sentry.io/privacy/" target="_blank" rel="noopener"
-            >sentry.io/privacy</a
-          >.
+          Estos proveedores pueden procesar datos en servidores ubicados
+          <strong>fuera del Espacio Económico Europeo</strong> (por ejemplo,
+          en Estados Unidos), aplicando las garantías previstas por la
+          normativa de protección de datos.
         </p>
       </section>
 
       <section>
-        <h2 class="sec"><span class="num">04</span> · Gestión de suscripciones — RevenueCat</h2>
-        <h3 class="sec-title">Gestión de suscripciones — RevenueCat</h3>
+        <h2 class="sec"><span class="num">04</span> · Permisos</h2>
+        <h3 class="sec-title">Permisos que utiliza la app</h3>
+        <h3>Almacenamiento</h3>
         <p>
-          Para gestionar las suscripciones de pago utilizamos RevenueCat. Este
-          servicio genera un identificador de usuario anónimo que permite
-          verificar el estado de tu suscripción sin asociarlo a tu nombre ni a
-          tu correo electrónico.
+          La app necesita acceso al almacenamiento del dispositivo
+          <strong>para guardar tus datos localmente</strong>. Es lo que
+          permite que tu información persista entre sesiones sin enviarla a la
+          nube.
         </p>
+        <h3>Biometría (Face ID / huella dactilar)</h3>
         <p>
-          Este identificador es necesario para el correcto funcionamiento de las
-          funciones de pago de la aplicación y no puede desactivarse si utilizas
-          dichas funciones.
-        </p>
-        <p>
-          Puedes consultar la política de privacidad de RevenueCat en
-          <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener"
-            >revenuecat.com/privacy</a
-          >.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="sec"><span class="num">05</span> · Almacenamiento local</h2>
-        <h3 class="sec-title">Almacenamiento local</h3>
-        <p>
-          Todo el contenido que generes o introduzcas en Suvlo se almacena
-          exclusivamente en tu dispositivo y nunca se transmite a nuestros
-          servidores. Si desinstalas la aplicación, estos datos locales serán
-          eliminados, salvo que estén respaldados por el sistema operativo (por
-          ejemplo, iCloud o Google Drive).
+          De forma opcional, puedes activar el
+          <strong>bloqueo biométrico</strong> para proteger el acceso a la
+          app. La autenticación la gestiona íntegramente el
+          <strong>sistema operativo de tu dispositivo</strong>: la app
+          <strong>nunca accede ni almacena tus datos biométricos</strong>,
+          solo recibe la confirmación de si la autenticación fue correcta.
         </p>
       </section>
 
       <section>
-        <h2 class="sec"><span class="num">06</span> · Cifrado y seguridad</h2>
-        <h3 class="sec-title">Cifrado y seguridad</h3>
+        <h2 class="sec"><span class="num">05</span> · Sin cuenta</h2>
+        <h3 class="sec-title">Sin cuenta y sin registro</h3>
         <p>
-          Todos los datos que se transmiten fuera de tu dispositivo (registros
-          de errores e identificador de suscripción) viajan cifrados mediante
-          HTTPS/TLS.
+          Suvlo <strong>no dispone de sistema de cuentas</strong>. No te
+          pedimos crear un usuario, ni facilitar un correo electrónico, nombre
+          o contraseña para usarla. No recopilamos datos identificativos
+          personales en nuestros sistemas.
         </p>
       </section>
 
       <section>
-        <h2 class="sec"><span class="num">07</span> · Eliminación de datos</h2>
-        <h3 class="sec-title">Eliminación de datos</h3>
+        <h2 class="sec"><span class="num">06</span> · Seguridad</h2>
+        <h3 class="sec-title">Seguridad de tus datos</h3>
         <p>
-          Los registros de errores recopilados por Sentry se eliminan
-          automáticamente a los 90 días. Si deseas solicitar la eliminación
-          anticipada de cualquier dato, puedes contactarnos en la dirección
-          indicada al final de esta política.
+          Aplicamos medidas razonables para proteger la información guardada
+          en tu dispositivo:
+        </p>
+        <ul class="body">
+          <li>La base de datos local se guarda <strong>cifrada</strong>.</li>
+          <li>
+            La clave de cifrado se almacena en el
+            <strong>llavero seguro del sistema</strong> (iOS Keychain /
+            Android Keystore), respaldado por hardware.
+          </li>
+          <li>
+            Puedes añadir una capa adicional con el
+            <strong>bloqueo biométrico</strong>.
+          </li>
+        </ul>
+        <p>
+          Ten en cuenta que ningún sistema es infalible y que la seguridad de
+          tu dispositivo también depende de que lo mantengas protegido (código
+          de desbloqueo, sistema actualizado).
         </p>
       </section>
 
       <section>
-        <h2 class="sec"><span class="num">08</span> · Cambios en esta política</h2>
+        <h2 class="sec"><span class="num">07</span> · Conservación</h2>
+        <h3 class="sec-title">Conservación y eliminación</h3>
+        <p>
+          Como tus datos están en tu dispositivo,
+          <strong>tú controlas su conservación</strong>. Puedes editarlos o
+          borrarlos desde la propia aplicación, y al
+          <strong>desinstalar la app se eliminan</strong> todos los datos
+          locales asociados.
+        </p>
+        <p>
+          Los datos tratados por RevenueCat y Better Stack se conservan según
+          los plazos y políticas de cada proveedor, enlazadas más arriba.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="sec"><span class="num">08</span> · Tus derechos</h2>
+        <h3 class="sec-title">Tus derechos</h3>
+        <p>
+          De acuerdo con el Reglamento General de Protección de Datos (RGPD),
+          tienes derecho a acceder, rectificar, suprimir, limitar u oponerte
+          al tratamiento de tus datos, así como a la portabilidad.
+        </p>
+        <p>
+          Dado que la mayor parte de la información reside en tu dispositivo,
+          puedes
+          <strong>ejercer estos derechos directamente</strong> consultando,
+          modificando o eliminando tus datos dentro de la app. Para los datos
+          tratados por RevenueCat o Better Stack, puedes contactarnos en
+          <span class="placeholder">andresnavarro.code@gmail.com</span> y te
+          ayudaremos a gestionarlo. También puedes presentar una reclamación
+          ante la autoridad de control competente (en España, la Agencia
+          Española de Protección de Datos).
+        </p>
+      </section>
+
+      <section>
+        <h2 class="sec"><span class="num">09</span> · Menores</h2>
+        <h3 class="sec-title">Menores</h3>
+        <p>
+          La aplicación no está dirigida a menores de
+          <span class="placeholder">13</span> años y no recopilamos
+          conscientemente datos de menores.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="sec"><span class="num">10</span> · Cambios</h2>
         <h3 class="sec-title">Cambios en esta política</h3>
         <p>
-          Si en el futuro se incorporasen nuevas funcionalidades que impliquen
-          el tratamiento de datos adicionales, esta política será actualizada
-          con antelación suficiente y se notificará a los usuarios a través de
-          la propia aplicación o de la página oficial.
-        </p>
-        <p>
-          Te recomendamos revisar esta página periódicamente para estar al tanto
-          de cualquier cambio.
+          Podemos actualizar esta política para reflejar cambios en la app o
+          en la normativa. Publicaremos la versión vigente en esta misma
+          página, indicando la fecha de última actualización.
         </p>
       </section>
 
       <section>
-        <h2 class="sec"><span class="num">09</span> · Contacto</h2>
+        <h2 class="sec"><span class="num">11</span> · Contacto</h2>
         <h3 class="sec-title">Contacto</h3>
         <p>
-          Si tienes alguna pregunta sobre esta Política de Privacidad, puedes
-          ponerte en contacto con nosotros en:
-        </p>
-        <p>
-          <a href="mailto:andresnavarro.code@gmail.com"
-            >andresnavarro.code@gmail.com</a
-          >
+          Si tienes cualquier duda sobre esta política o sobre cómo tratamos
+          los datos, escríbenos a
+          <span class="placeholder">andresnavarro.code@gmail.com</span>.
         </p>
       </section>
     </main>
 
     <footer>
-      <div class="wrap">© 2026 Suvlo · ANG CODE</div>
+      <div class="wrap">
+        © <span class="placeholder">2026</span> Suvlo ·
+        <span class="placeholder">ANG CODE</span>
+      </div>
     </footer>
   </body>
 </html>
