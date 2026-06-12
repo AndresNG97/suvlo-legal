@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANG CODE — Apps hechas con cabeza</title>
+    <meta
+      name="description"
+      content="Dev independiente. Apps móviles sencillas, útiles y que respetan tu privacidad."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #18181b;
+        --muted: #5c5c66;
+        --faint: #9b9ba3;
+        --line: #ececef;
+        --line-strong: #dededf;
+        --serif: "Fraunces", Georgia, serif;
+        --sans: "Inter", system-ui, -apple-system, sans-serif;
+        --maxw: 760px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--sans);
+        font-size: 17px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* ---------- Nav ---------- */
+      nav {
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.02em;
+      }
+      .logo-mark {
+        width: 26px;
+        height: 26px;
+        border-radius: 7px;
+        background: var(--text);
+        color: var(--bg);
+        display: grid;
+        place-items: center;
+        font-family: var(--serif);
+        font-weight: 600;
+        font-size: 15px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        font-size: 15px;
+        color: var(--muted);
+      }
+      .nav-links a:hover {
+        color: var(--text);
+      }
+      @media (max-width: 560px) {
+        .nav-links {
+          display: none;
+        }
+      }
+
+      /* ---------- Hero ---------- */
+      header.hero {
+        padding: 96px 0 72px;
+      }
+      .eyebrow {
+        font-size: 13px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--faint);
+        font-weight: 500;
+        margin-bottom: 22px;
+      }
+      h1 {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: clamp(2.4rem, 6vw, 3.8rem);
+        line-height: 1.06;
+        letter-spacing: -0.02em;
+        margin-bottom: 24px;
+      }
+      .lead {
+        max-width: 520px;
+        font-size: 1.15rem;
+        color: var(--muted);
+        margin-bottom: 34px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 22px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 500;
+        background: var(--text);
+        color: var(--bg);
+        transition: opacity 0.18s;
+      }
+      .btn:hover {
+        opacity: 0.85;
+      }
+
+      /* ---------- Sections ---------- */
+      .section {
+        padding: 56px 0;
+        border-top: 1px solid var(--line);
+      }
+      .kicker {
+        font-size: 13px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--faint);
+        font-weight: 500;
+        margin-bottom: 36px;
+      }
+
+      /* ---------- Apps ---------- */
+      .app {
+        display: flex;
+        gap: 20px;
+        padding: 26px 0;
+        border-top: 1px solid var(--line);
+      }
+      .app:first-of-type {
+        border-top: none;
+      }
+      .app-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        font-family: var(--serif);
+        font-size: 22px;
+        font-weight: 500;
+        color: var(--bg);
+        flex-shrink: 0;
+        background: var(--app-color, var(--text));
+      }
+      .app-body h3 {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 1.35rem;
+        letter-spacing: -0.01em;
+        margin-bottom: 6px;
+      }
+      .app-body p {
+        color: var(--muted);
+        font-size: 15.5px;
+        margin-bottom: 12px;
+        max-width: 52ch;
+      }
+      .app-body a {
+        font-size: 14.5px;
+        color: var(--text);
+        font-weight: 500;
+        border-bottom: 1px solid var(--line-strong);
+        padding-bottom: 1px;
+        transition: border-color 0.18s;
+      }
+      .app-body a:hover {
+        border-color: var(--text);
+      }
+      .suvlo {
+        --app-color: #1d9e75;
+      }
+      .lessen {
+        --app-color: #5e7060;
+      }
+
+      /* ---------- Values ---------- */
+      .values {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px 48px;
+      }
+      @media (max-width: 560px) {
+        .values {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+      }
+      .value h4 {
+        font-size: 1.02rem;
+        font-weight: 600;
+        margin-bottom: 7px;
+      }
+      .value p {
+        font-size: 15px;
+        color: var(--muted);
+      }
+
+      /* ---------- Footer ---------- */
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 40px 0 64px;
+      }
+      .foot-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .foot-links {
+        display: flex;
+        gap: 22px;
+        font-size: 14.5px;
+        color: var(--muted);
+        flex-wrap: wrap;
+      }
+      .foot-links a:hover {
+        color: var(--text);
+      }
+      .copy {
+        display: block;
+        margin-top: 22px;
+        font-size: 13.5px;
+        color: var(--faint);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="wrap nav-inner">
+        <a class="logo" href="#top">
+          <span class="logo-mark">a</span>
+          ANG CODE
+        </a>
+        <div class="nav-links">
+          <a href="#apps">Aplicaciones</a>
+          <a href="#valores">Cómo lo hago</a>
+          <a href="mailto:andresng1997@gmail.com">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero wrap" id="top">
+      <p class="eyebrow">Dev independiente</p>
+      <h1>Apps hechas con cabeza</h1>
+      <p class="lead">
+        Hago apps móviles sencillas, útiles y que respetan tu privacidad. Sin
+        rodeos: menos ruido, más propósito.
+      </p>
+      <a class="btn" href="#apps">Ver aplicaciones</a>
+    </header>
+
+    <main>
+      <section class="section wrap" id="apps">
+        <div class="kicker">Mis apps</div>
+
+        <article class="app suvlo">
+          <div class="app-icon">S</div>
+          <div class="app-body">
+            <h3>Suvlo</h3>
+            <p>
+              Gestiona todas tus suscripciones en un solo lugar y mantén el
+              control de tus gastos recurrentes con claridad.
+            </p>
+            <a href="suvlo-policy/">Política de privacidad →</a>
+          </div>
+        </article>
+
+        <article class="app lessen">
+          <div class="app-icon">L</div>
+          <div class="app-body">
+            <h3>Lessen</h3>
+            <p>
+              Lleva el seguimiento de tus préstamos: quién te debe, a quién
+              debes y cómo evolucionan, todo bajo control.
+            </p>
+            <a href="lessen-policy/">Política de privacidad →</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="section wrap" id="valores">
+        <div class="kicker">Lo que me importa</div>
+        <div class="values">
+          <div class="value">
+            <h4>Simplicidad</h4>
+            <p>Interfaces claras que se entienden sin manual. Lo justo y necesario.</p>
+          </div>
+          <div class="value">
+            <h4>Privacidad</h4>
+            <p>Tus datos son tuyos. Recojo lo mínimo y lo trato con cuidado.</p>
+          </div>
+          <div class="value">
+            <h4>Detalle</h4>
+            <p>Cada animación, cada pixel y cada palabra están pensados a conciencia.</p>
+          </div>
+          <div class="value">
+            <h4>Mejora continua</h4>
+            <p>Escucho, itero y pulo. Las apps van creciendo contigo.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap foot-inner">
+        <a class="logo" href="#top">
+          <span class="logo-mark">a</span>
+          ANG CODE
+        </a>
+        <div class="foot-links">
+          <a href="#apps">Aplicaciones</a>
+          <a href="suvlo-policy/">Privacidad · Suvlo</a>
+          <a href="lessen-policy/">Privacidad · Lessen</a>
+          <a href="mailto:andresng1997@gmail.com">Contacto</a>
+        </div>
+      </div>
+      <div class="wrap">
+        <span class="copy">© 2026 ANG CODE · angcode.com</span>
+      </div>
+    </footer>
+  </body>
+</html>
